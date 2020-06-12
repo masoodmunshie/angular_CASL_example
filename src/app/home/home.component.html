@@ -1,0 +1,32 @@
+<h1>Example User Page</h1>
+
+
+<button type="button" style="margin-top: 10px;" (click)="Admin()" class="btn btn-info">Login As Admin , Only Add and
+  Edit</button><br />
+<button type="button" style="margin-top: 10px;" (click)="Reader()" class="btn btn-info">Login As Reader, Only
+  Read</button><br />
+<button type="button" style="margin-top: 10px;" (click)="Super()" class="btn btn-info">Login As Super User,
+  Everything</button><br />
+<button type="button" style="margin-top: 10px;" (click)="Logout()" class="btn btn-info">Logout</button><br />
+
+<br />
+
+
+<h3>This is what you have access to: </h3>
+<div *ngIf="'read' | able: 'user'">
+  <button type="button" style="margin-top: 10px;" class="btn btn-info">Read</button><br />
+</div>
+
+<div *ngIf="'add' | able: 'user'">
+  <button type="button" style="margin-top: 10px;" class="btn btn-info">Add</button><br />
+</div>
+
+<div *ngIf="'edit' | able: 'user'">
+  <button type="button" style="margin-top: 10px;" class="btn btn-info">Edit</button><br />
+</div>
+
+<div *ngIf="'delete' | able: 'user'">
+  <button type="button" style="margin-top: 10px;" class="btn btn-info">Delete</button><br />
+</div>
+
+<br />
